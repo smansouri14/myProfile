@@ -16,13 +16,27 @@
 @media (max-width: 500px) {
   #main-nav {
     flex-direction: column;
+    display: grid auto;
     align-items: center;
+
+    h1 {
+      align-content: center;
+      display: grid;
+    }
+
+    img.logo {
+      align-items: center;
+      margin-left: 33%;
+    }
 
     li {
       padding: 1rem;
     }
     .company {
       font-size: 1rem;
+    }
+    .company {
+      display: none;
     }
   }
 
@@ -88,6 +102,13 @@
       display: none;
     }
   }
+
+  //Work
+
+  .item {
+    border-bottom: solid 10px #60b9fe;
+  }
+
   // Contact
   #contact {
     &-a {

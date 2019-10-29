@@ -34,8 +34,8 @@ img {
 
 // Logo
 #logo {
-  width: 90px;
-  height: 70px;
+  width: 400px;
+  height: 100px;
   color: #fff;
   text-transform: uppercase;
 }
@@ -43,11 +43,37 @@ img {
 // Main Nav
 #main-nav {
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
-  padding-top: 1rem;
+  z-index: 3;
+  padding: 0.25rem;
+  background: #fff;
+  color: #333;
+  border-bottom: 3px solid $main-color;
 
   ul {
     display: flex;
+    align-items: center;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+  }
+
+  // span {
+  //   color: #2b4a3d;
+  //   align-items: center;
+  //   padding: 1rem 1.5rem;
+  // }
+
+  .logo {
+    height: 4rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
   }
 
   li {
@@ -56,7 +82,7 @@ img {
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: $dark-color;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
@@ -71,7 +97,9 @@ img {
     }
   }
   .company {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-shadow: 1px 1px $main-color;
   }
 }
 
@@ -83,6 +111,7 @@ img {
     background: $bg-image no-repeat center right / cover;
     height: 100vh;
     color: #fff;
+    opacity: 0.8;
 
     // Header Content
     .header-content {

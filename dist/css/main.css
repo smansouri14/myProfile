@@ -188,22 +188,38 @@ img {
   width: 100%; }
 
 #logo {
-  width: 90px;
-  height: 70px;
+  width: 400px;
+  height: 100px;
   color: #fff;
   text-transform: uppercase; }
 
 #main-nav {
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
-  padding-top: 1rem; }
+  z-index: 3;
+  padding: 0.25rem;
+  background: #fff;
+  color: #333;
+  border-bottom: 3px solid #60b9fe; }
   #main-nav ul {
-    display: flex; }
+    display: flex;
+    align-items: center; }
+  #main-nav h1 {
+    display: flex;
+    align-items: center; }
+  #main-nav .logo {
+    height: 4rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; }
   #main-nav li {
     padding: 1rem 1.5rem; }
   #main-nav a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
@@ -213,12 +229,15 @@ img {
     #main-nav a.current {
       border-color: #60b9fe; }
   #main-nav .company {
-    font-size: 2rem; }
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-shadow: 1px 1px #60b9fe; }
 
 #header-home {
   background: url("../img/showcase.jpg") no-repeat center right/cover;
   height: 100vh;
-  color: #fff; }
+  color: #fff;
+  opacity: 0.8; }
   #header-home .header-content {
     text-align: center;
     padding-top: 20%; }
@@ -424,11 +443,20 @@ img {
 @media (max-width: 500px) {
   #main-nav {
     flex-direction: column;
+    display: grid auto;
     align-items: center; }
+    #main-nav h1 {
+      align-content: center;
+      display: grid; }
+    #main-nav img.logo {
+      align-items: center;
+      margin-left: 33%; }
     #main-nav li {
       padding: 1rem; }
     #main-nav .company {
       font-size: 1rem; }
+    #main-nav .company {
+      display: none; }
   #header-home {
     height: 10rem;
     border-bottom: 3px solid #60b9fe;
@@ -456,6 +484,8 @@ img {
     grid-template-areas: "bioimage" "bio" "aw1" "aw2" "aw3"; }
   #about-c {
     display: none; }
+  .item {
+    border-bottom: solid 10px #60b9fe; }
   #contact-a .text-fields {
     grid-template-areas: "name" "subject" "email" "phone" "message"; }
   #contact-b div {
